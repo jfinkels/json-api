@@ -221,7 +221,7 @@ one of the following:
   relationship URLs. Linkage **MUST** be expressed as:
   * `type` and `id` members for to-one relationships. `type` is not required
     if the value of `id` is `null`.
-  * `type` and `ids` members for homogenous to-many relationships. `type` is
+  * `type` and `ids` members for homogeneous to-many relationships. `type` is
     not required if the value of `ids` is an empty array (`[]`).
   * A `data` member whose value is an array of objects each containing `type`
     and `id` members for heterogenous to-many relationships.
@@ -792,7 +792,7 @@ Accept: application/vnd.api+json
 If a to-many relationship is included in the `links` section of a resource
 object, it **MUST** be an object containing:
 
-* `type` and `ids` members for homogenous to-many relationships; to clear the
+* `type` and `ids` members for homogeneous to-many relationships; to clear the
   relationship, set the `ids` member to `[]`
 * a `data` member whose value is an array of objects each containing `type` and
   `id` members for heterogenous to-many relationships; to clear the
