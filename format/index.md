@@ -1433,12 +1433,14 @@ An error object **MAY** have the following members:
 * `"detail"` - A human-readable explanation specific to this occurrence of the
   problem.
 * `"links"` - An array of JSON Pointers
-  [[RFC6901](https://tools.ietf.org/html/rfc6901)] to the associated resource(s)
-  within the request document [e.g. `["/data"]` for a primary data object].
+  ([RFC6901](https://tools.ietf.org/html/rfc6901)) to the associated
+  resource(s) within the request document (e.g. `["/data"]` for a primary data
+  object).
 * `"paths"` - An array of JSON Pointers to the relevant attribute(s) within the
-  associated resource(s) in the request document. Each path **MUST** be relative
-  to the resource path(s) expressed in the error object's `"links"` member
-  [e.g. `["/first-name", "/last-name"]` to reference a couple attributes].
+  associated resource(s) in the request document. Each path **MUST** be
+  relative to the resource path(s) expressed in the error object's `"links"`
+  member (e.g. `["/first-name", "/last-name"]` to reference a couple
+  attributes).
 
 Additional members **MAY** be specified within error objects.
 
