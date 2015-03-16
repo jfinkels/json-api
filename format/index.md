@@ -127,10 +127,10 @@ objects, or a value representing a resource relationship.
 }
 ```
 
-A logical collection of resources (e.g., the target of a to-many relationship)
-**MUST** be represented as an array, even if it only contains one item.
-A logically singular resource (e.g., the target of a to-one relationship)
-**MUST** be represented as a single resource object.
+A logical collection of resources (for example, the target of a to-many
+relationship) **MUST** be represented as an array, even if it only contains one
+item.  A logically singular resource (for example, the target of a to-one
+relationship) **MUST** be represented as a single resource object.
 
 Error objects **MUST** appear under a top-level key named `"errors"`.
 
@@ -187,10 +187,10 @@ Here's how an article (i.e. a resource of type "articles") might appear in a doc
 A resource object **MAY** contain additional top-level members. These members
 represent "[attributes]" and may contain any valid JSON value.
 
-Although has-one foreign keys (e.g. `author_id`) are often stored internally
-alongside other information to be represented in a resource object, these keys
-**SHOULD NOT** appear as attributes. If relations are provided, they **MUST**
-be represented under the "links object".
+Although has-one foreign keys (for example, `author_id`) are often stored
+internally alongside other information to be represented in a resource object,
+these keys **SHOULD NOT** appear as attributes. If relations are provided, they
+**MUST** be represented under the "links object".
 
 #### Complex Attributes <a href="#document-structure-resource-object-complex-attributes" id="document-structure-resource-object-complex-attributes"></a>
 
@@ -1433,12 +1433,14 @@ An error object **MAY** have the following members:
 * `"detail"` - A human-readable explanation specific to this occurrence of the
   problem.
 * `"links"` - An array of JSON Pointers
-  [[RFC6901](https://tools.ietf.org/html/rfc6901)] to the associated resource(s)
-  within the request document [e.g. `["/data"]` for a primary data object].
+  [[RFC6901](https://tools.ietf.org/html/rfc6901)] to the associated
+  resource(s) within the request document [for example, `["/data"]` for a
+  primary data object].
 * `"paths"` - An array of JSON Pointers to the relevant attribute(s) within the
-  associated resource(s) in the request document. Each path **MUST** be relative
-  to the resource path(s) expressed in the error object's `"links"` member
-  [e.g. `["/first-name", "/last-name"]` to reference a couple attributes].
+  associated resource(s) in the request document. Each path **MUST** be
+  relative to the resource path(s) expressed in the error object's `"links"`
+  member [for example, `["/first-name", "/last-name"]` to reference a couple
+  attributes].
 
 Additional members **MAY** be specified within error objects.
 
